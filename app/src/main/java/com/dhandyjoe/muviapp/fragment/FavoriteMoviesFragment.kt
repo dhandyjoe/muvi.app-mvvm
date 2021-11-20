@@ -57,10 +57,10 @@ class FavoriteMoviesFragment : Fragment() {
             movieAdapter.submitList(it)
             movieAdapter.notifyDataSetChanged()
 
-            binding.rvMovie.layoutManager = LinearLayoutManager(activity)
-            binding.rvMovie.adapter = movieAdapter
+            binding.rvMovieFavorite.layoutManager = LinearLayoutManager(activity)
+            binding.rvMovieFavorite.adapter = movieAdapter
 
-            binding.rvMovie.visibility = View.VISIBLE
+            binding.rvMovieFavorite.visibility = View.VISIBLE
         })
 
         return binding.root

@@ -1,6 +1,8 @@
 package com.dhandyjoe.muviapp.activity
 
+import androidx.recyclerview.widget.RecyclerView
 import androidx.test.core.app.ActivityScenario
+import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.IdlingRegistry
 import androidx.test.espresso.action.ViewActions.*
@@ -143,5 +145,38 @@ class MainActivityTest {
             .check(matches(isDisplayed()))
         onView(withId(R.id.tv_sinopsisDetail))
             .check(matches(withText(dummyDataTVShow[0].desc)))
+    }
+
+    @Test
+    fun addMovieFavorite() {
+        onView(withId(R.id.rv_movie)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                5,
+                click()
+            )
+        )
+        onView(withId(R.id.iv_favoriteDetail)).perform(click())
+
+        Espresso.pressBack()
+
+        onView(withId(R.id.rv_movie)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                5,
+                click()
+            )
+        )
+        onView(withId(R.id.iv_favoriteDetail)).perform(click())
+
+        onView(withId(R.id.tv_titleDetail)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_genreDetails)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_releaseDateDetail)).check(matches(isDisplayed()))
+        onView(withId(R.id.rv_ratingDetail)).check(matches(isDisplayed()))
+        onView(withId(R.id.iv_movieDetail)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_sinopsisDetail)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun openFavoritePage() {
+        onView(withId(R.id.iv_favorite)).perform(click())
     }
 }

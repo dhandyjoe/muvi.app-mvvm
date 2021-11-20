@@ -56,10 +56,10 @@ class FavoriteTVShowFragment : Fragment() {
             movieAdapter.submitList(it)
             movieAdapter.notifyDataSetChanged()
 
-            binding.rvMovie.layoutManager = LinearLayoutManager(activity)
-            binding.rvMovie.adapter = movieAdapter
+            binding.rvMovieFavorite.layoutManager = LinearLayoutManager(activity)
+            binding.rvMovieFavorite.adapter = movieAdapter
 
-            binding.rvMovie.visibility = View.VISIBLE
+            binding.rvMovieFavorite.visibility = View.VISIBLE
         })
 
         return binding.root
@@ -83,18 +83,5 @@ class FavoriteTVShowFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
-    }
-
-    private fun showListMovie(data: FilmAdapter) {
-        binding.rvMovie.layoutManager = LinearLayoutManager(activity)
-        binding.rvMovie.adapter = data
-
-        data.setOnItemClickCallback(object : FilmAdapter.OnItemClickCallback{
-            override fun onItemClicked(data: ModelFilm) {
-                val intent = Intent(activity, DetailFilmActivity::class.java)
-                intent.putExtra(DetailFilmActivity.EXTRA_FILM, data)
-                startActivity(intent)
-            }
-        })
     }
 }

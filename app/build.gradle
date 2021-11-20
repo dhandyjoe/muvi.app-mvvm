@@ -53,23 +53,16 @@ dependencies {
 
     implementation "androidx.room:room-runtime:2.3.0"
     kapt "androidx.room:room-compiler:2.3.0"
-    implementation "androidx.paging:paging-runtime:3.1.0"
-
+    implementation "androidx.paging:paging-runtime:2.1.2"
     // Required -- JUnit 4 framework
     testImplementation 'junit:junit:4.13.2'
     // Optional -- Mockito framework
-    testImplementation 'org.mockito:mockito-core:4.0.0'
-
+    testImplementation 'org.mockito:mockito-core:2.22.0'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
     implementation "androidx.activity:activity-ktx:1.4.0"
-
     androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
-
     testImplementation "androidx.arch.core:core-testing:2.1.0"
-
-
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
     testImplementation 'org.mockito:mockito-inline:3.6.0'
-
     testImplementation "org.mockito.kotlin:mockito-kotlin:4.0.0"
 }
