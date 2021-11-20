@@ -3,7 +3,7 @@ package com.dhandyjoe.muviapp.ui
 import android.os.Handler
 import android.os.Looper
 import androidx.paging.DataSource
-import com.dhandyjoe.muviapp.EspressoIdlingResource
+import com.dhandyjoe.muviapp.util.EspressoIdlingResource
 import com.dhandyjoe.muviapp.database.ConstantsMovie
 import com.dhandyjoe.muviapp.database.ConstantsTVShow
 import com.dhandyjoe.muviapp.local.FIlmDao

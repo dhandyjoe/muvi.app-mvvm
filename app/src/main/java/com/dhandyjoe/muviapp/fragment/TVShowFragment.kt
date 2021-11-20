@@ -53,17 +53,6 @@ class TVShowFragment : Fragment() {
         return binding.root
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            TVShowFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
-
     private fun showTVList(data: FilmAdapter) {
         binding.rvTvShow.layoutManager = LinearLayoutManager(activity)
         binding.rvTvShow.adapter = data
