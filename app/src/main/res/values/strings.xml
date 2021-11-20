@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MuviApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="movies">Movies</string>
+    <string name="tvshow">TV Show</string>
+    <string name="deskripsi">DESKRIPSI</string>
+    <string name="name_app">muvi.app</string>
+    <string name="image_item_list">image_item_list</string>
+    <string name="icon_app">icon_app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
